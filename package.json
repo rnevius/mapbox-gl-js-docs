@@ -12,7 +12,7 @@
   "devDependencies": {
     "@mapbox/appropriate-images": "^2.0.0",
     "@mapbox/appropriate-images-react": "^1.0.0",
-    "@mapbox/batfish": "1.11.1",
+    "@mapbox/batfish": "^1.11.2",
     "@mapbox/copyeditor": "^0.7.0",
     "@mapbox/dr-ui": "0.21.2",
     "@mapbox/mapbox-gl-supported": "^1.4.0",
