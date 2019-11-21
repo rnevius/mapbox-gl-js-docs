@@ -3,12 +3,10 @@
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/light-v10',
-    center: [-96, 37.8],
-    zoom: 3
+    center: [-77, 38.75],
+    zoom: 5
 });
-
 map.on('load', function () {
-
     map.addLayer({
         "id": "points",
         "type": "symbol",
@@ -17,41 +15,45 @@ map.on('load', function () {
             "data": {
                 "type": "FeatureCollection",
                 "features": [{
-                    // feature for Mapbox DC
                     "type": "Feature",
                     "geometry": {
                         "type": "Point",
                         "coordinates": [-77.03238901390978, 38.913188059745586]
                     },
                     "properties": {
-                        "title": "Mapbox DC",
+                        "title": "Washington DC",
                         "icon": "monument"
                     }
                 }, {
-                    // feature for Mapbox SF
                     "type": "Feature",
                     "geometry": {
                         "type": "Point",
-                        "coordinates": [-122.414, 37.776]
+                        "coordinates": [-79.9959, 40.4406]
                     },
                     "properties": {
-                        "title": "Mapbox SF",
+                        "title": "Pittsburgh",
+                        "icon": "bridges"
+                    }
+                }, {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [-76.2859, 36.8508]
+                    },
+                    "properties": {
+                        "title": "Norfolk",
                         "icon": "harbor"
                     }
                 }]
             }
         },
         "layout": {
-            // get the icon name from the source's "icon" property
-            // concatenate the name to get an icon from the style's sprite sheet
-            "icon-image": ["concat", ["get", "icon"], "-15"],
-            // get the title name from the source's "title" property
+            "icon-image": ["coalesce", ["image", ["concat", ["get", "icon"], "-15"]], ["image", "marker-15"]],
             "text-field": ["get", "title"],
             "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
             "text-offset": [0, 0.6],
             "text-anchor": "top"
         }
     });
-
 });
 </script>

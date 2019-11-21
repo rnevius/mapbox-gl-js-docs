@@ -19,6 +19,7 @@ import { styleSpecNavigation } from '../data/style-spec-navigation';
 import { plugins } from '../pages/plugins';
 import { routeToPrefixed } from '@mapbox/batfish/modules/route-to';
 import Search from '@mapbox/dr-ui/search';
+import * as Sentry from '@sentry/browser';
 
 const slugger = new GithubSlugger();
 
@@ -28,23 +29,15 @@ class PageShell extends React.Component {
     componentDidMount() {
         // initialize analytics
         if (typeof window !== 'undefined' && window.initializeMapboxAnalytics) {
-            const isProduction = /\.?mapbox\.com/.test(
-                window.location.hostname
-            );
-
-            let sentryInit = {};
-            if (isProduction) {
-                sentryInit = {
-                    sentryDsn:
-                        'https://6ba8cfeeedad4fb7acb8576f0fd6e266@sentry.io/1384508'
-                };
-            } else {
-                sentryInit = false;
-            }
             window.initializeMapboxAnalytics({
-                sentry: sentryInit
+                segmentIntegrations: {
+                    'Facebook Pixel': true
+                }
             });
         }
+        Sentry.init({
+            dsn: 'https://6ba8cfeeedad4fb7acb8576f0fd6e266@sentry.io/1384508'
+        });
     }
 
     accordionNavProps() {
@@ -174,7 +167,13 @@ class PageShell extends React.Component {
             if (section.subnav) {
                 subNavItems = section.subnav.map(item => {
                     slugger.reset();
-                    const itemSlug = slugger.slug(item.title);
+                    let maintainCase = false;
+                    let title = item.title;
+                    if (item.title === 'ResolvedImage') {
+                        title = 'resolvedImage';
+                        maintainCase = true;
+                    }
+                    const itemSlug = slugger.slug(title, maintainCase);
                     return {
                         text: item.title,
                         url: `#${sectionSlug}-${itemSlug}`
