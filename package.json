@@ -7,7 +7,8 @@
     "url": "git://github.com/mapbox/mapbox-gl-js-docs.git"
   },
   "engines": {
-    "node": ">=6.4.0"
+    "node": ">=10",
+    "npm": "^6.2.0"
   },
   "devDependencies": {
     "@mapbox/appropriate-images": "^2.0.0",
