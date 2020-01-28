@@ -40,12 +40,17 @@ module.exports = () => {
             }
         ],
         jsxtremeMarkdownOptions: {
-            wrapper: path.join(
-                __dirname,
-                './docs/components/markdown-page-shell.js'
-            ),
+            getWrapper: () => {
+                return path.join(
+                    __dirname,
+                    './docs/components/markdown-page-shell.js'
+                );
+            },
             rehypePlugins: [
+                require('rehype-slug'),
+                require('@mapbox/rehype-prism'),
                 require('@mapbox/dr-ui/plugins/add-links-to-headings'),
+                require('@mapbox/dr-ui/plugins/create-sections'),
                 require('@mapbox/dr-ui/plugins/make-table-scroll')
             ]
         },
@@ -78,7 +83,7 @@ module.exports = () => {
             }
         },
         devBrowserslist: false,
-        babelInclude: ['documentation', 'debounce-fn', 'mimic-fn']
+        babelInclude: ['documentation']
     };
 
     // Local builds treat the `dist` directory as static assets, allowing you to test examples against the

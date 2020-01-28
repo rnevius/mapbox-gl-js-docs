@@ -1,3 +1,12 @@
+/*---
+title: API Reference
+description: The Mapbox GL JS API documentation to render interactive maps from vector tiles and Mapbox styles.
+pathname: /mapbox-gl-js/api/
+contentType: API
+lanaguage:
+    - JavaScript
+---*/
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import PageShell from '../components/page_shell';
@@ -9,16 +18,6 @@ import createFormatters from 'documentation/src/output/util/formatters';
 import LinkerStack from 'documentation/src/output/util/linker_stack';
 import ApiItem from '../components/api-item';
 import DrUiNote from '@mapbox/dr-ui/note';
-import WarningImage from '@mapbox/dr-ui/warning-image';
-
-const meta = {
-    title: 'API Reference',
-    description:
-        'The Mapbox GL JS API documentation to render interactive maps from vector tiles and Mapbox styles.',
-    pathname: '/mapbox-gl-js/api/',
-    contentType: 'API',
-    lanaguage: ['JavaScript']
-};
 
 const linkerStack = new LinkerStack({}).namespaceResolver(docs, namespace => {
     const slugger = new GithubSlugger();
@@ -67,7 +66,7 @@ class Note extends React.Component {
 export default class Api extends React.Component {
     render() {
         return (
-            <PageShell meta={meta}>
+            <PageShell {...this.props}>
                 <div className="prose">
                     <h1 className="mt24 mt0-mm txt-fancy">Mapbox GL JS</h1>
                     <div className="py6 color-gray txt-s mt-neg24 mb12">
@@ -92,32 +91,22 @@ export default class Api extends React.Component {
                         , a compatible renderer written in C++ with bindings for
                         desktop and mobile platforms.
                     </p>
-                    <DrUiNote
-                        title="Pricing is changing for Mapbox GL JS < v1.0.0"
-                        theme="warning"
-                        imageComponent={<WarningImage color="orange" />}
-                    >
+                    <DrUiNote title="Pricing for Mapbox GL JS">
                         <p>
-                            If you are using Mapbox GL JS v1.0.0 or higher you
-                            will not be affected by this change. Your usage will
-                            continue to be counted in{' '}
+                            If you are using Mapbox GL JS v1.0.0 or higher your
+                            usage is counted in{' '}
                             <a href="https://docs.mapbox.com/help/glossary/map-loads/">
                                 map loads
                             </a>
-                            .
+                            . If you are using Mapbox GL JS {'<'} v1.0.0, your
+                            usage is measured in tile requests.
                         </p>
                         <p>
-                            If you are using Mapbox GL JS {'<'} v1.0.0, your
-                            usage is measured in <em>tile requests</em>. The
-                            rate per <em>tile request</em> is changing in
-                            December 2019. For more details see{' '}
+                            For more details see{' '}
                             <a href="https://docs.mapbox.com/accounts/overview/pricing/#mapbox-gl-js--v100">
                                 our pricing guide
-                            </a>
-                            .
-                        </p>
-                        <p>
-                            Questions? Reach out to our{' '}
+                            </a>{' '}
+                            or reach out to our{' '}
                             <a href="https://support.mapbox.com/hc/en-us">
                                 support team
                             </a>
