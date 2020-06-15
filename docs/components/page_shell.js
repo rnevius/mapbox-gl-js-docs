@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import { withLocation } from '@mapbox/batfish/modules/with-location';
 import ReactPageShell from '../../vendor/docs-page-shell/react-page-shell.js';
 // dr-ui components
