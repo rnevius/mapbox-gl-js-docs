@@ -3,7 +3,8 @@
 <script>
     var map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v11'
+        style: 'mapbox://styles/mapbox/streets-v11',
+        zoom: 0.1
     });
 
     var images = {
@@ -40,61 +41,62 @@
                 pixelRatio: 2
             });
 
+            map.addSource('points', {
+                'type': 'geojson',
+                'data': {
+                    'type': 'FeatureCollection',
+                    'features': [
+                        {
+                            'type': 'Feature',
+                            'geometry': {
+                                'type': 'Point',
+                                'coordinates': [40, -30]
+                            },
+                            'properties': {
+                                'image-name': 'popup-debug',
+                                'name': 'Line 1\nLine 2\nLine 3'
+                            }
+                        },
+                        {
+                            'type': 'Feature',
+                            'geometry': {
+                                'type': 'Point',
+                                'coordinates': [40, 30]
+                            },
+                            'properties': {
+                                'image-name': 'popup',
+                                'name': 'Line 1\nLine 2\nLine 3'
+                            }
+                        },
+                        {
+                            'type': 'Feature',
+                            'geometry': {
+                                'type': 'Point',
+                                'coordinates': [-40, -30]
+                            },
+                            'properties': {
+                                'image-name': 'popup-debug',
+                                'name': 'One longer line'
+                            }
+                        },
+                        {
+                            'type': 'Feature',
+                            'geometry': {
+                                'type': 'Point',
+                                'coordinates': [-40, 30]
+                            },
+                            'properties': {
+                                'image-name': 'popup',
+                                'name': 'One longer line'
+                            }
+                        }
+                    ]
+                }
+            });
             map.addLayer({
                 'id': 'points',
                 'type': 'symbol',
-                'source': {
-                    'type': 'geojson',
-                    'data': {
-                        'type': 'FeatureCollection',
-                        'features': [
-                            {
-                                'type': 'Feature',
-                                'geometry': {
-                                    'type': 'Point',
-                                    'coordinates': [40, -30]
-                                },
-                                'properties': {
-                                    'image-name': 'popup-debug',
-                                    'name': 'Line 1\nLine 2\nLine 3'
-                                }
-                            },
-                            {
-                                'type': 'Feature',
-                                'geometry': {
-                                    'type': 'Point',
-                                    'coordinates': [40, 30]
-                                },
-                                'properties': {
-                                    'image-name': 'popup',
-                                    'name': 'Line 1\nLine 2\nLine 3'
-                                }
-                            },
-                            {
-                                'type': 'Feature',
-                                'geometry': {
-                                    'type': 'Point',
-                                    'coordinates': [-40, -30]
-                                },
-                                'properties': {
-                                    'image-name': 'popup-debug',
-                                    'name': 'One longer line'
-                                }
-                            },
-                            {
-                                'type': 'Feature',
-                                'geometry': {
-                                    'type': 'Point',
-                                    'coordinates': [-40, 30]
-                                },
-                                'properties': {
-                                    'image-name': 'popup',
-                                    'name': 'One longer line'
-                                }
-                            }
-                        ]
-                    }
-                },
+                'source': 'points',
                 'layout': {
                     'text-field': ['get', 'name'],
                     'icon-text-fit': 'both',
@@ -105,24 +107,25 @@
             });
 
             // the original, unstretched image for comparison
+            map.addSource('original', {
+                'type': 'geojson',
+                'data': {
+                    'type': 'FeatureCollection',
+                    'features': [
+                        {
+                            'type': 'Feature',
+                            'geometry': {
+                                'type': 'Point',
+                                'coordinates': [0, -70]
+                            }
+                        }
+                    ]
+                }
+            });
             map.addLayer({
                 'id': 'original',
                 'type': 'symbol',
-                'source': {
-                    'type': 'geojson',
-                    'data': {
-                        'type': 'FeatureCollection',
-                        'features': [
-                            {
-                                'type': 'Feature',
-                                'geometry': {
-                                    'type': 'Point',
-                                    'coordinates': [0, -70]
-                                }
-                            }
-                        ]
-                    }
-                },
+                'source': 'original',
                 'layout': {
                     'text-field': 'unstretched image',
                     'icon-image': 'popup-debug',

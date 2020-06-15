@@ -44,14 +44,16 @@
     var pauseButton = document.getElementById('pause');
 
     map.on('load', function() {
+        map.addSource('line', {
+            'type': 'geojson',
+            'data': geojson
+        });
+
         // add the line which will be modified in the animation
         map.addLayer({
             'id': 'line-animation',
             'type': 'line',
-            'source': {
-                'type': 'geojson',
-                'data': geojson
-            },
+            'source': 'line',
             'layout': {
                 'line-cap': 'round',
                 'line-join': 'round'
@@ -105,7 +107,7 @@
                 // append new coordinates to the lineString
                 geojson.features[0].geometry.coordinates.push([x, y]);
                 // then update the map
-                map.getSource('line-animation').setData(geojson);
+                map.getSource('line').setData(geojson);
             }
             // Request the next frame of the animation.
             animation = requestAnimationFrame(animateLine);

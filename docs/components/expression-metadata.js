@@ -1,9 +1,8 @@
-import ref from '../../mapbox-gl-js/src/style-spec/reference/latest';
-import { toString } from '../../mapbox-gl-js/src/style-spec/expression/types';
-import CompoundExpression from '../../mapbox-gl-js/src/style-spec/expression/compound_expression';
+import { toString } from '@mapbox/mapbox-gl-style-spec/expression/types';
+import CompoundExpression from '@mapbox/mapbox-gl-style-spec/expression/compound_expression';
 
 // registers compound expressions
-import '../../mapbox-gl-js/src/style-spec/expression/definitions/index';
+import '@mapbox/mapbox-gl-style-spec/expression/definitions/index';
 
 const comparisonSignatures = [
     {
@@ -16,7 +15,7 @@ const comparisonSignatures = [
     }
 ];
 
-const types = {
+export const types = {
     '==': comparisonSignatures,
     '!=': comparisonSignatures,
     '<': comparisonSignatures,
@@ -121,8 +120,39 @@ const types = {
         {
             type: 'boolean',
             parameters: [
-                'needle: (boolean, string or number)',
-                'haystack: (array or string)'
+                'keyword: InputType (boolean, string, or number)',
+                'input: InputType (array or string)'
+            ]
+        }
+    ],
+    'index-of': [
+        {
+            type: 'number',
+            parameters: [
+                'keyword: InputType (boolean, string, or number)',
+                'input: InputType (array or string)'
+            ]
+        },
+        {
+            type: 'number',
+            parameters: [
+                'keyword: InputType (boolean, string, or number)',
+                'input: InputType (array or string)',
+                'index: number'
+            ]
+        }
+    ],
+    slice: [
+        {
+            type: 'OutputType (ItemType or string)',
+            parameters: ['input: InputType (array or string)', 'index: number']
+        },
+        {
+            type: 'OutputType (ItemType or string)',
+            parameters: [
+                'input: InputType (array or string)',
+                'index: number',
+                'index: number'
             ]
         }
     ],
@@ -158,7 +188,7 @@ const types = {
         {
             type: `OutputType (number, array<number>, or Color)`,
             parameters: [
-                'interpolation: ["linear"] | ["exponential", base] | ["cubic-bezier", x1, y1, x2, y2 ]',
+                'interpolation: ["linear"] | ["exponential", base] | ["cubic-bezier", x1, y1, x2, y2]',
                 'input: number',
                 'stop_input_1: number, stop_output_1: OutputType',
                 'stop_input_n: number, stop_output_n: OutputType, ...'
@@ -169,7 +199,7 @@ const types = {
         {
             type: 'Color',
             parameters: [
-                'interpolation: ["linear"] | ["exponential", base] | ["cubic-bezier", x1, y1, x2, y2 ]',
+                'interpolation: ["linear"] | ["exponential", base] | ["cubic-bezier", x1, y1, x2, y2]',
                 'input: number',
                 'stop_input_1: number, stop_output_1: Color',
                 'stop_input_n: number, stop_output_n: Color, ...'
@@ -208,7 +238,7 @@ const types = {
             parameters: ['[...] (JSON array literal)']
         },
         {
-            type: 'Object',
+            type: 'object',
             parameters: ['{...} (JSON object literal)']
         }
     ],
@@ -230,6 +260,18 @@ const types = {
             parameters: ['previously bound variable name']
         }
     ],
+    within: [
+        {
+            type: 'boolean',
+            parameters: ['object']
+        }
+    ],
+    distance: [
+        {
+            type: 'number',
+            parameters: ['object']
+        }
+    ],
     collator: [
         {
             type: 'collator',
@@ -242,9 +284,10 @@ const types = {
         {
             type: 'formatted',
             parameters: [
-                `input_1: string, options_1: { "font-scale": number, "text-font": array<string>, "text-color": color }`,
+                // Use backticks to avoid breaking eslint for array<string>
+                `input_1: string | image, options_1: { "font-scale": number, "text-font": array<string>, "text-color": color }`,
                 '...',
-                `input_n: string, options_n: { "font-scale": number, "text-font": array<string>, "text-color": color }`
+                `input_n: string | image, options_n: { "font-scale": number, "text-font": array<string>, "text-color": color }`
             ]
         }
     ],
@@ -280,20 +323,6 @@ for (const name in CompoundExpression.definitions) {
 }
 
 delete types['error'];
-
-export const expressions = {};
-export const expressionGroups = {};
-for (const name in types) {
-    const spec = ref['expression_name'].values[name];
-    expressionGroups[spec.group] = expressionGroups[spec.group] || [];
-    expressionGroups[spec.group].push(name);
-    expressions[name] = {
-        name,
-        doc: spec.doc,
-        type: types[name],
-        sdkSupport: spec['sdk-support']
-    };
-}
 
 function processParameters(params) {
     if (Array.isArray(params)) {
