@@ -85,7 +85,8 @@ https://github.com/mapbox/mapbox-gl-js/blob/master/src/style-spec/reference/v8.j
             js: '0.10.0',
             android: '2.0.1',
             ios: '2.0.0',
-            macos: '0.1.0'
+            macos: '0.1.0',
+            mts: '1.0.0'
         }
     }}
 />
@@ -121,7 +122,8 @@ https://github.com/mapbox/mapbox-gl-js/blob/master/src/style-spec/reference/v8.j
             js: '0.10.0',
             android: '2.0.1',
             ios: '2.0.0',
-            macos: '0.1.0'
+            macos: '0.1.0',
+            mts: '1.0.0'
         }
     }}
 />

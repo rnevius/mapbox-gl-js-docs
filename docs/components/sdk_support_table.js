@@ -32,6 +32,9 @@ export default class SDKSupportTable extends React.Component {
                             <td style={{ borderTopRightRadius: '4px' }}>
                                 macOS SDK
                             </td>
+                            <td style={{ borderTopRightRadius: '4px' }}>
+                                Mapbox Tiling Service (MTS)
+                            </td>
                         </tr>
                     </thead>
                     <tbody>
@@ -43,6 +46,7 @@ export default class SDKSupportTable extends React.Component {
                                     <td>{this.support(entry, 'android')}</td>
                                     <td>{this.support(entry, 'ios')}</td>
                                     <td>{this.support(entry, 'macos')}</td>
+                                    <td>{this.support(entry, 'mts')}</td>
                                 </tr>
                             )
                         )}
