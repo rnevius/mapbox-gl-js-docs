@@ -60,6 +60,7 @@ var map = new mapboxgl.Map(${this.mapOptions});
     }
 
     renderBundler() {
+        const bundlerCss = `import 'mapbox-gl/dist/mapbox-gl.css';`;
         const bundlerMapJs = `
 import mapboxgl from 'mapbox-gl'; // or "const mapboxgl = require('mapbox-gl');"
 
@@ -85,6 +86,15 @@ npm install --save mapbox-gl
                     of your HTML file.
                 </p>
                 <Copyable lang="javascript">{bundlerMapJs}</Copyable>
+                <p>
+                    If you&apos;re using a CSS loader like{' '}
+                    <a href="https://webpack.js.org/loaders/css-loader/">
+                        webpack css-loader
+                    </a>
+                    , instead of including it via the HTML{' '}
+                    <code>&lt;head&gt;</code> you could import it directly.
+                </p>
+                <Copyable lang="javascript">{bundlerCss}</Copyable>
             </div>
         );
     }
