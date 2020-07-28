@@ -7,7 +7,7 @@
     "url": "git://github.com/mapbox/mapbox-gl-js-docs.git"
   },
   "engines": {
-    "node": ">=10"
+    "node": ">=12"
   },
   "devDependencies": {
     "@babel/core": "^7.10.2",
