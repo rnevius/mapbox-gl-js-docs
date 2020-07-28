@@ -26,6 +26,10 @@ module.exports = () => {
             {
                 test: /\.html$/,
                 use: 'raw-loader'
+            },
+            {
+                test: /@mapbox\/mapbox-gl-style-spec\/expression\/definitions\/index.js$/,
+                sideEffects: true
             }
         ],
         ignoreWithinPagesDirectory: ['example/*.html'],
