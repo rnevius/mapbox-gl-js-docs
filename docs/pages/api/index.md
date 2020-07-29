@@ -2,6 +2,10 @@
 title: Introduction
 description: The Mapbox GL JS API documentation to render interactive maps from vector tiles and Mapbox styles.
 contentType: API
+navOrder: 2
+order: 1
+hideTitle: true
+layout: accordion
 language:
     - JavaScript
 prependJs:

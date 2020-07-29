@@ -3,6 +3,8 @@ title: Other
 id: other
 description: The value for any layout or paint property may be specified as a function.
 contentType: specification
+order: 11
+layout: accordion
 prependJs:
     - "import SDKSupportTable from '../../components/sdk_support_table';"
     - "import ref from '@mapbox/mapbox-gl-style-spec/reference/latest';"

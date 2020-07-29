@@ -3,10 +3,16 @@ const mapboxAssembly = require('@mapbox/mbx-assembly');
 const path = require('path');
 const apiNavigation = require('./docs/data/api-navigation');
 const { buildApiSearch } = require('./docs/util/build-api-search');
+const {
+    buildNavigation
+} = require('@mapbox/dr-ui/helpers/batfish/navigation.js');
 
+const { buildTopics } = require('@mapbox/dr-ui/helpers/batfish/topics.js');
+
+const siteBasePath = '/mapbox-gl-js';
 module.exports = () => {
     const config = {
-        siteBasePath: '/mapbox-gl-js',
+        siteBasePath: siteBasePath,
         siteOrigin: 'https://docs.mapbox.com',
         pagesDirectory: `${__dirname}/docs/pages`,
         outputDirectory: path.join(__dirname, '_site'),
@@ -45,7 +51,7 @@ module.exports = () => {
             getWrapper: () => {
                 return path.join(
                     __dirname,
-                    './docs/components/markdown-page-shell.js'
+                    './docs/components/page-shell-wrapper.js'
                 );
             },
             rehypePlugins: [
@@ -58,35 +64,9 @@ module.exports = () => {
         },
         dataSelectors: {
             apiSearch: () => buildApiSearch(),
-            examples: ({ pages }) => {
-                return pages
-                    .filter(
-                        ({ path, frontMatter }) =>
-                            /\/example\//.test(path) && frontMatter.tags
-                    )
-                    .map(example => {
-                        return {
-                            path: example.path,
-                            title: example.frontMatter.title,
-                            description: example.frontMatter.description,
-                            tags: example.frontMatter.tags,
-                            pathname: example.frontMatter.pathname
-                        };
-                    });
-            },
-            listSubfolders: data => {
-                const folders = data.pages
-                    .filter(file => {
-                        return file.path.split('/').length === 4;
-                    })
-                    .map(folder => {
-                        return folder;
-                    });
-                return folders;
-            },
-            apiNavigation: () => {
-                return apiNavigation;
-            }
+            apiNavigation: () => apiNavigation,
+            navigation: data => buildNavigation(siteBasePath, data),
+            topics: data => buildTopics(data)
         },
         devBrowserslist: false,
         babelInclude: [
