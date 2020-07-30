@@ -1,7 +1,4 @@
-import {
-    expressions,
-    expressionGroups
-} from '../components/expression-metadata';
+import { expressions, expressionGroups } from '../components/expressions';
 
 const sourceTypes = [
     'vector',
@@ -42,6 +39,5 @@ const groupedExpressions = [
         .sort((a, b) => a.localeCompare(b))
         .map(name => expressions[name])
 }));
-
 
 export { sourceTypes, layerTypes, groupedExpressions };
