@@ -1,6 +1,6 @@
 ---
 title: Display a map
-description: Initialize a map in an HTML element with Mapbox GL JS.
+description: Initialize a map in an [`HTML element`](/mapbox-gl-js/api/map/) with [Mapbox GL JS](/mapbox-gl-js/api/).
 tags:
   - styles
 thumbnail: simple-map
