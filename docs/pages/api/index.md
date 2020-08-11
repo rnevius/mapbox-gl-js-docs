@@ -1,10 +1,10 @@
 ---
-title: Introduction
+title: API Reference
 description: The Mapbox GL JS API documentation to render interactive maps from vector tiles and Mapbox styles.
 contentType: API
 navOrder: 2
 order: 1
-hideTitle: true
+hideTitle: true # hide title because we are using OverviewHeader
 layout: accordion
 language:
     - JavaScript

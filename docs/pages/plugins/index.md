@@ -1,7 +1,20 @@
 ---
 title: Plugins
 description: Extend your Mapbox GL JS map with plugins.
-layouts: page
+contentType: example
+language:
+- JavaScript
 navOrder: 3
-hideTitle: true
+layout: page # use the layout page
+sidebarTheme: bg-gray-faint # add sidebar color
+sidebar: sectioned # use the SectionedNavigation sidebar (we supplement the data in batfish.config.json)
+includeFilterBar: true
+hideSubItems: false # show all sidebar sub items
+sidebarTitle: Plugins # add "Plugin" title to sidebar
+hideFeedback: true # hide feedback from page
+prependJs:
+- "import Plugins from '../../components/plugins-page';"
 ---
+
+
+{{<Plugins />}}

@@ -1,10 +1,11 @@
 ---
 title: Render world copies
 description: Toggle between rendering a single world and multiple copies of the world.
-tags:
-  - styles
+topics:
+  - Styles
 thumbnail: render-world-copies
 contentType: example
+layout: example
 language:
 - JavaScript
 prependJs:

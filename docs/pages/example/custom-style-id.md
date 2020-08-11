@@ -1,10 +1,11 @@
 ---
 title: Display a map with a custom style
 description: Using a custom Mapbox-hosted style.
-tags:
-  - styles
+topics:
+  - Styles
 thumbnail: custom-style-id
 contentType: example
+layout: example
 language:
 - JavaScript
 prependJs:

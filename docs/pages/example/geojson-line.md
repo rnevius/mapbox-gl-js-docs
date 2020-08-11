@@ -1,10 +1,11 @@
 ---
 title: Add a GeoJSON line
 description: Add a GeoJSON line to a map.
-tags:
-  - layers
+topics:
+  - Layers
 thumbnail: geojson-line
 contentType: example
+layout: example
 language:
 - JavaScript
 prependJs:

@@ -2761,7 +2761,7 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@elastic/react-search-ui-views@1.3.2", "@elastic/react-search-ui-views@^1.3.2":
+"@elastic/react-search-ui-views@1.3.2":
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/@elastic/react-search-ui-views/-/react-search-ui-views-1.3.2.tgz#210b3ad6f65cc39095d23713ea901c765f7c6927"
   integrity sha512-m0tP22T5M6Yzoi6Qg3CIuVpTsMfI7lhnLRLx2kh+esdZTbAYMvpolQxg8wGKubk0xxbNKJcEDMPzMDQppRMGag==
@@ -2772,7 +2772,7 @@
     rc-pagination "^1.20.1"
     react-select "^2.4.4"
 
-"@elastic/react-search-ui@^1.3.2":
+"@elastic/react-search-ui@1.3.2":
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/@elastic/react-search-ui/-/react-search-ui-1.3.2.tgz#1ff8a7a3fbcdef269f6f7fdd4c8d89240e40527d"
   integrity sha512-/+kYkGalUp0DUhOADUC3LBpz2PoGH7r4YcO3YEokib0NE8yvBqzChW2vSVi0eX8woFm8ydFj8t6zVyiSanh00w==
@@ -2781,7 +2781,7 @@
     "@elastic/react-search-ui-views" "1.3.2"
     "@elastic/search-ui" "1.3.2"
 
-"@elastic/search-ui-site-search-connector@^1.3.2":
+"@elastic/search-ui-site-search-connector@1.3.2":
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/@elastic/search-ui-site-search-connector/-/search-ui-site-search-connector-1.3.2.tgz#fedc982847261026601e1f1b8177df2661eb0512"
   integrity sha512-XlqITMXXyd4TXfhu8d+aTKPjSOsL/NDrZon4DPoO3Dty9FfgptnS05peU4ejzys93plZafVFTpn/CRg8Nrss4A==
@@ -3207,30 +3207,35 @@
     vfile-reporter "^5.1.1"
     vfile-sort "^2.0.0"
 
-"@mapbox/dr-ui@^0.29.1":
-  version "0.29.1"
-  resolved "https://registry.yarnpkg.com/@mapbox/dr-ui/-/dr-ui-0.29.1.tgz#b9b6c787c5eeb5df83315922d6171212692073e7"
-  integrity sha512-AIptvkKk6o2b+wd+W4jL0JqpD2DPMoA9fVjHgYtVQYr2HCgUgDf/3+q2Pxnsodu2bpvnoplFGkgAdYnc7iapVg==
+"@mapbox/dr-ui@^1.0.0-layouts.7":
+  version "1.0.0-layouts.7"
+  resolved "https://registry.yarnpkg.com/@mapbox/dr-ui/-/dr-ui-1.0.0-layouts.7.tgz#c91a098e568c06df7f47abf2c3d09963e9ee57d2"
+  integrity sha512-Cx2VgOlNCc0IuYl+nBtkWJ0mZO5bNXR4B7xtdmPsrfCaMbo+GawqrNTkU/yk0SR5SX9Eh13v6Cy9LYQfTmQLJA==
   dependencies:
-    "@elastic/react-search-ui" "^1.3.2"
-    "@elastic/react-search-ui-views" "^1.3.2"
-    "@elastic/search-ui-site-search-connector" "^1.3.2"
+    "@elastic/react-search-ui" "1.3.2"
+    "@elastic/react-search-ui-views" "1.3.2"
+    "@elastic/search-ui-site-search-connector" "1.3.2"
     "@mapbox/mapbox-gl-supported" "^1.4.1"
     "@mapbox/mr-ui" "^0.9.1"
-    "@sentry/browser" "^5.15.5"
+    "@sentry/browser" "^5.19.1"
     classnames "^2.2.6"
     compare-versions "^3.4.0"
     debounce "^1.2.0"
     downshift "^3.2.7"
+    github-slugger "^1.3.0"
     hastscript "^5.0.0"
-    prismjs "^1.18.0"
+    prismjs "^1.21.0"
     react-app-polyfill "^1.0.5"
     react-aria-modal "^4.0.0"
     react-html-parser "^2.0.2"
+    react-scrollspy "^3.4.2"
     react-stickynode "^2.1.1"
     rehype-sectionize-headings "^1.0.0-rc.1"
+    remark-frontmatter "^2.0.0"
+    remark-parse "^8.0.3"
     remove-markdown "^0.3.0"
     slugify "^1.3.6"
+    unified "^9.0.0"
     uuid "^3.3.2"
 
 "@mapbox/eslint-config-docs@^0.6.0":
@@ -3476,18 +3481,18 @@
     unified-lint-rule "^1.0.5"
     unist-util-visit "^2.0.2"
 
-"@mapbox/remark-lint-mapbox@^0.12.1":
-  version "0.12.1"
-  resolved "https://registry.yarnpkg.com/@mapbox/remark-lint-mapbox/-/remark-lint-mapbox-0.12.1.tgz#2aff3e710c5556597331cc51d0e350ac2b239c29"
-  integrity sha512-/TqDi+YmCyP0wmBJKYkgYXTlBpXZVqDi0xy/AMJdv31XPU+yIwy8K7bLcG8/Kn7rme0EyFha4i64nChcRJFeaQ==
+"@mapbox/remark-lint-mapbox@^1.2.0-layouts.2":
+  version "1.2.0-layouts.2"
+  resolved "https://registry.yarnpkg.com/@mapbox/remark-lint-mapbox/-/remark-lint-mapbox-1.2.0-layouts.2.tgz#836b5e139a4e74224f46b38d66c288fc3d83466f"
+  integrity sha512-5FnBAu6mteN3CvklkW6YNlyReJxDkfkLUu8BN6hri+fwgQA8dxZVKVGEA45gGyNqTAg6lOc96lden+oKxzTQPQ==
   dependencies:
     "@mapbox/jsxtreme-markdown" "^1.0.0"
     check-links "^1.1.8"
     js-yaml "^3.14.0"
     unified-lint-rule "^1.0.6"
     unist-util-generated "^1.1.5"
-    unist-util-visit "^2.0.2"
-    unist-util-visit-parents "^3.0.2"
+    unist-util-visit "^2.0.3"
+    unist-util-visit-parents "^3.1.0"
     valid-url "^1.0.9"
 
 "@mapbox/scroll-restorer@^1.0.0":
@@ -3554,6 +3559,16 @@
     "@sentry/utils" "5.16.0"
     tslib "^1.9.3"
 
+"@sentry/browser@^5.19.1":
+  version "5.20.1"
+  resolved "https://registry.yarnpkg.com/@sentry/browser/-/browser-5.20.1.tgz#be59522d0914d58309e1367d997d4b3cd5385d7e"
+  integrity sha512-ClykuvrEsMKgAvifx5VHzRjchwYbJFX8YiIicYx+Wr3MXL2jLG6OEfHHJwJeyBL2C3vxd5O0KPK3pGMR9wPMLA==
+  dependencies:
+    "@sentry/core" "5.20.1"
+    "@sentry/types" "5.20.1"
+    "@sentry/utils" "5.20.1"
+    tslib "^1.9.3"
+
 "@sentry/core@5.16.0":
   version "5.16.0"
   resolved "https://registry.yarnpkg.com/@sentry/core/-/core-5.16.0.tgz#c6cf535a80473160254b76c1e9ccff59524820e4"
@@ -3565,6 +3580,17 @@
     "@sentry/utils" "5.16.0"
     tslib "^1.9.3"
 
+"@sentry/core@5.20.1":
+  version "5.20.1"
+  resolved "https://registry.yarnpkg.com/@sentry/core/-/core-5.20.1.tgz#857cc7186931c37ff032a1bcb573600ebacde961"
+  integrity sha512-gG622/UY2TePruF6iUzgVrbIX5vN8w2cjlWFo1Est8MvCfQsz8agGaLMCAyl5hCGJ6K2qTUZDOlbCNIKoMclxg==
+  dependencies:
+    "@sentry/hub" "5.20.1"
+    "@sentry/minimal" "5.20.1"
+    "@sentry/types" "5.20.1"
+    "@sentry/utils" "5.20.1"
+    tslib "^1.9.3"
+
 "@sentry/hub@5.16.0":
   version "5.16.0"
   resolved "https://registry.yarnpkg.com/@sentry/hub/-/hub-5.16.0.tgz#99bea03969ac66291ad2dff8a6e2ccb19d7ed109"
@@ -3572,6 +3598,15 @@
   dependencies:
     "@sentry/types" "5.16.0"
     "@sentry/utils" "5.16.0"
+    tslib "^1.9.3"
+
+"@sentry/hub@5.20.1":
+  version "5.20.1"
+  resolved "https://registry.yarnpkg.com/@sentry/hub/-/hub-5.20.1.tgz#05e83ba972a96e9d7225a64c7d3728aa9fcefc4e"
+  integrity sha512-Nv5BXf14BEc08acDguW6eSqkAJLVf8wki283FczEvTsQZZuSBHM9cJ5Hnehr6n+mr8wWpYLgUUYM0oXXigUmzQ==
+  dependencies:
+    "@sentry/types" "5.20.1"
+    "@sentry/utils" "5.20.1"
     tslib "^1.9.3"
 
 "@sentry/minimal@5.16.0":
@@ -3583,10 +3618,24 @@
     "@sentry/types" "5.16.0"
     tslib "^1.9.3"
 
+"@sentry/minimal@5.20.1":
+  version "5.20.1"
+  resolved "https://registry.yarnpkg.com/@sentry/minimal/-/minimal-5.20.1.tgz#2e2b63d9cd265b7e2f593f3eab4e9874bd87eeef"
+  integrity sha512-2PeJKDTHNsUd1jtSLQBJ6oRI+xrIJrYDQmsyK/qs9D7HqHfs+zNAMUjYseiVeSAFGas5IcNSuZbPRV4BnuoZ0w==
+  dependencies:
+    "@sentry/hub" "5.20.1"
+    "@sentry/types" "5.20.1"
+    tslib "^1.9.3"
+
 "@sentry/types@5.16.0":
   version "5.16.0"
   resolved "https://registry.yarnpkg.com/@sentry/types/-/types-5.16.0.tgz#6f5fc48e4f2f5d94bbd7331cac42a4734f4cc02b"
   integrity sha512-VQB/zPfPz5yEXNLAv0lov+p3gt+YPBuExz7n33OuXAgvDedxzYfC1066Y6YM/ryBwwl6TDTV3M6JTDEYu3pulA==
+
+"@sentry/types@5.20.1":
+  version "5.20.1"
+  resolved "https://registry.yarnpkg.com/@sentry/types/-/types-5.20.1.tgz#ccc4fa4c9d0f94d93014b04e674762d5d5cd30a2"
+  integrity sha512-OU+i/lcjGpDJv0XkNpsKrI2r1VPp8qX0H6Knq8NuZrlZe3AbvO3jRJJK0pH14xFv8Xok5jbZZpKKoQLxYfxqsw==
 
 "@sentry/utils@5.16.0":
   version "5.16.0"
@@ -3594,6 +3643,14 @@
   integrity sha512-9y8StFaLQaGaqAleSJ9pswp2MSEwJ6W3trULIziZvz2XrmqdT7n23vVZXJ3peSflxfkENtYeI+5FIp+zQXfKJQ==
   dependencies:
     "@sentry/types" "5.16.0"
+    tslib "^1.9.3"
+
+"@sentry/utils@5.20.1":
+  version "5.20.1"
+  resolved "https://registry.yarnpkg.com/@sentry/utils/-/utils-5.20.1.tgz#68cfae0d0e3b321b4649b59f30265024b29eae63"
+  integrity sha512-dhK6IdO6g7Q2CoxCbB+q8gwUapDUH5VjraFg0UBzgkrtNhtHLylqmwx0sWQvXCcp14Q/3MuzEbb4euvoh8o8oA==
+  dependencies:
+    "@sentry/types" "5.20.1"
     tslib "^1.9.3"
 
 "@sindresorhus/is@^0.14.0":
@@ -14100,10 +14157,10 @@ pretty-ms@^4.0.0:
   dependencies:
     parse-ms "^2.0.0"
 
-prismjs@^1.18.0:
-  version "1.18.0"
-  resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.18.0.tgz#8f04dd47fa232cbd27d1ca969107580ff43f06e4"
-  integrity sha512-N0r3i/Cto516V8+GKKamhsPVZSFcO0TMUBtIDW6uq6BVqoC3FNtZVZ+cmH16N2XtGQlgRN+sFUTjOdCsEP51qw==
+prismjs@^1.21.0:
+  version "1.21.0"
+  resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.21.0.tgz#36c086ec36b45319ec4218ee164c110f9fc015a3"
+  integrity sha512-uGdSIu1nk3kej2iZsLyDoJ7e9bnPzIgY0naW/HdknGj61zScaprVEVGHrPoXqI+M9sP0NDnTK2jpkvmldpuqDw==
   optionalDependencies:
     clipboard "^2.0.0"
 
@@ -14563,6 +14620,15 @@ react-popper@^0.7.4:
   integrity sha512-ya9dhhGCf74JTOB2uyksEHhIGw7w9tNZRUJF73lEq2h4H5JT6MBa4PdT4G+sx6fZwq+xKZAL/sVNAIuojPn7Dg==
   dependencies:
     popper.js "^1.12.5"
+    prop-types "^15.5.10"
+
+react-scrollspy@^3.4.2:
+  version "3.4.3"
+  resolved "https://registry.yarnpkg.com/react-scrollspy/-/react-scrollspy-3.4.3.tgz#12bccebc7e2dfe228b873288b3f473904edb3854"
+  integrity sha512-c2QZpMPWxm1HF71h1EqaxBldx2zLYO0aZ24Bcuo2mUWF79T+F6qOtr7XJCzUDm99NOwhVKQD01a7A8VC6c90CQ==
+  dependencies:
+    babel-runtime "^6.26.0"
+    classnames "^2.2.5"
     prop-types "^15.5.10"
 
 react-select@^2.4.4:
@@ -15151,6 +15217,28 @@ remark-parse@^8.0.0, remark-parse@^8.0.2:
   version "8.0.2"
   resolved "https://registry.npmjs.org/remark-parse/-/remark-parse-8.0.2.tgz#5999bc0b9c2e3edc038800a64ff103d0890b318b"
   integrity sha512-eMI6kMRjsAGpMXXBAywJwiwAse+KNpmt+BK55Oofy4KvBZEqUDj6mWbGLJZrujoPIPPxDXzn3T9baRlpsm2jnQ==
+  dependencies:
+    ccount "^1.0.0"
+    collapse-white-space "^1.0.2"
+    is-alphabetical "^1.0.0"
+    is-decimal "^1.0.0"
+    is-whitespace-character "^1.0.0"
+    is-word-character "^1.0.0"
+    markdown-escapes "^1.0.0"
+    parse-entities "^2.0.0"
+    repeat-string "^1.5.4"
+    state-toggle "^1.0.0"
+    trim "0.0.1"
+    trim-trailing-lines "^1.0.0"
+    unherit "^1.0.4"
+    unist-util-remove-position "^2.0.0"
+    vfile-location "^3.0.0"
+    xtend "^4.0.1"
+
+remark-parse@^8.0.3:
+  version "8.0.3"
+  resolved "https://registry.yarnpkg.com/remark-parse/-/remark-parse-8.0.3.tgz#9c62aa3b35b79a486454c690472906075f40c7e1"
+  integrity sha512-E1K9+QLGgggHxCQtLt++uXltxEprmWzNfg+MxpfHsZlrddKzZ/hZyWHDbK3/Ap8HJQqYJRXP+jHczdL6q6i85Q==
   dependencies:
     ccount "^1.0.0"
     collapse-white-space "^1.0.2"
@@ -17925,10 +18013,18 @@ unist-util-visit-parents@^2.0.0:
   dependencies:
     unist-util-is "^2.1.2"
 
-unist-util-visit-parents@^3.0.0, unist-util-visit-parents@^3.0.2:
+unist-util-visit-parents@^3.0.0:
   version "3.0.2"
   resolved "https://registry.npmjs.org/unist-util-visit-parents/-/unist-util-visit-parents-3.0.2.tgz#d4076af3011739c71d2ce99d05de37d545f4351d"
   integrity sha512-yJEfuZtzFpQmg1OSCyS9M5NJRrln/9FbYosH3iW0MG402QbdbaB8ZESwUv9RO6nRfLAKvWcMxCwdLWOov36x/g==
+  dependencies:
+    "@types/unist" "^2.0.0"
+    unist-util-is "^4.0.0"
+
+unist-util-visit-parents@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/unist-util-visit-parents/-/unist-util-visit-parents-3.1.0.tgz#4dd262fb9dcfe44f297d53e882fc6ff3421173d5"
+  integrity sha512-0g4wbluTF93npyPrp/ymd3tCDTMnP0yo2akFD2FIBAYXq/Sga3lwaU1D8OYKbtpioaI6CkDcQ6fsMnmtzt7htw==
   dependencies:
     "@types/unist" "^2.0.0"
     unist-util-is "^4.0.0"
@@ -17951,6 +18047,15 @@ unist-util-visit@^2.0.0, unist-util-visit@^2.0.2:
   version "2.0.2"
   resolved "https://registry.npmjs.org/unist-util-visit/-/unist-util-visit-2.0.2.tgz#3843782a517de3d2357b4c193b24af2d9366afb7"
   integrity sha512-HoHNhGnKj6y+Sq+7ASo2zpVdfdRifhTgX2KTU3B/sO/TTlZchp7E3S4vjRzDJ7L60KmrCPsQkVK3lEF3cz36XQ==
+  dependencies:
+    "@types/unist" "^2.0.0"
+    unist-util-is "^4.0.0"
+    unist-util-visit-parents "^3.0.0"
+
+unist-util-visit@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/unist-util-visit/-/unist-util-visit-2.0.3.tgz#c3703893146df47203bb8a9795af47d7b971208c"
+  integrity sha512-iJ4/RczbJMkD0712mGktuGpm/U4By4FfDonL7N/9tATGIF4imikjOuagyMY53tnZq3NP6BcmlrHhEKAfGWjh7Q==
   dependencies:
     "@types/unist" "^2.0.0"
     unist-util-is "^4.0.0"

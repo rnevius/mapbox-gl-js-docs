@@ -4,10 +4,11 @@ const path = require('path');
 const apiNavigation = require('./docs/data/api-navigation');
 const { buildApiSearch } = require('./docs/util/build-api-search');
 const {
-    buildNavigation
-} = require('@mapbox/dr-ui/helpers/batfish/navigation.js');
-
-const { buildTopics } = require('@mapbox/dr-ui/helpers/batfish/topics.js');
+    buildNavigation,
+    buildTopics
+} = require('@mapbox/dr-ui/helpers/batfish/index.js');
+const pluginTopics = require('./docs/data/build-plugin-topics');
+const topicsOrder = require('./docs/data/topics.json');
 
 const siteBasePath = '/mapbox-gl-js';
 module.exports = () => {
@@ -49,10 +50,7 @@ module.exports = () => {
         ],
         jsxtremeMarkdownOptions: {
             getWrapper: () => {
-                return path.join(
-                    __dirname,
-                    './docs/components/page-shell-wrapper.js'
-                );
+                return path.join(__dirname, './docs/components/page-shell.js');
             },
             rehypePlugins: [
                 require('rehype-slug'),
@@ -66,7 +64,16 @@ module.exports = () => {
             apiSearch: () => buildApiSearch(),
             apiNavigation: () => apiNavigation,
             navigation: data => buildNavigation(siteBasePath, data),
-            topics: data => buildTopics(data)
+            topics: data =>
+                buildTopics(
+                    data,
+                    {
+                        // append plugin topics
+                        '/mapbox-gl-js/plugins/': { topics: pluginTopics }
+                    },
+                    // order of topics on examples page
+                    topicsOrder
+                )
         },
         devBrowserslist: false,
         babelInclude: [

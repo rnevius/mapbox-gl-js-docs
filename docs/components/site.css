@@ -101,3 +101,16 @@ pre + .style-spec-property {
 .api-example pre {
     margin-bottom: 0 !important;
 }
+
+/* plugins-page overrides */
+#docs-content .plugins-page h2 {
+    font-size: 15px !important;
+    line-height: 24px !important;
+    font-weight: bold !important;
+    padding: 0 !important;
+    margin: 0px !important;
+}
+/* remove underline from github/example links */
+.plugins-page .link {
+    text-decoration: none !important;
+}
