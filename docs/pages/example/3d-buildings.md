@@ -8,6 +8,9 @@ contentType: example
 layout: example
 language:
 - JavaScript
+products:
+- Mapbox GL JS
+- Mapbox Streets tileset
 prependJs:
 - "import Example from '../../components/example';"
 - "import html from './3d-buildings.html';"

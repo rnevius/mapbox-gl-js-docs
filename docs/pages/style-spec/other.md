@@ -5,6 +5,8 @@ description: The value for any layout or paint property may be specified as a fu
 contentType: specification
 order: 11
 layout: accordion
+products:
+- Mapbox Style Specification
 prependJs:
     - "import SDKSupportTable from '../../components/sdk_support_table';"
     - "import ref from '@mapbox/mapbox-gl-style-spec/reference/latest';"

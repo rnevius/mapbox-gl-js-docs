@@ -5,6 +5,8 @@ description: A style's sprite property supplies a URL template for loading small
 contentType: specification
 order: 5
 layout: accordion
+products:
+- Mapbox Style Specification
 prependJs:
     - "import ref from '@mapbox/mapbox-gl-style-spec/reference/latest';"
 ---

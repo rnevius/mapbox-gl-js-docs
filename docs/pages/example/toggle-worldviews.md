@@ -10,6 +10,9 @@ contentType: example
 layout: example
 language:
 - JavaScript
+products:
+- Mapbox GL JS
+- Mapbox Streets tileset
 prependJs:
 - "import Example from '../../components/example';"
 - "import html from './toggle-worldviews.html';"

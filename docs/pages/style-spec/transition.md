@@ -5,6 +5,8 @@ description: A transition property controls timing for the interpolation between
 contentType: specification
 order: 7
 layout: accordion
+products:
+- Mapbox Style Specification
 prependJs:
     - "import Items from '../../components/style-spec/items';"
     - "import ref from '@mapbox/mapbox-gl-style-spec/reference/latest';"

@@ -5,6 +5,8 @@ description: An expression defines a formula for computing the value of the prop
 contentType: specification
 order: 10
 layout: accordion
+products:
+- Mapbox Style Specification
 prependJs:
     - "import ExpressionReference from '../../components/style-spec/expression-reference';"
 ---

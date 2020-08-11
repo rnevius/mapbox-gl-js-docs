@@ -5,7 +5,9 @@ contentType: API
 order: 4
 layout: accordion
 language:
-    - JavaScript
+- JavaScript
+products:
+- Mapbox GL JS
 ---*/
 
 import React from 'react';

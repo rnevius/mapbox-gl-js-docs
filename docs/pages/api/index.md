@@ -7,15 +7,17 @@ order: 1
 hideTitle: true # hide title because we are using OverviewHeader
 layout: accordion
 language:
-    - JavaScript
+- JavaScript
+products:
+- Mapbox GL JS
 prependJs:
-  - "import OverviewHeader from '@mapbox/dr-ui/overview-header';"
-  - "import Quickstart from '../../components/quickstart';"
-  - "import Example from '../../components/example';"
-  - "import SimpleMapHtml from '../example/simple-map.html';"
-  - "import Copyable from '../../components/copyable';"
-  - "import urls from '../../components/urls';"
-  - "import {version} from '../../../mapbox-gl-js/package.json';"
+- "import OverviewHeader from '@mapbox/dr-ui/overview-header';"
+- "import Quickstart from '../../components/quickstart';"
+- "import Example from '../../components/example';"
+- "import SimpleMapHtml from '../example/simple-map.html';"
+- "import Copyable from '../../components/copyable';"
+- "import urls from '../../components/urls';"
+- "import {version} from '../../../mapbox-gl-js/package.json';"
 ---
 
 {{

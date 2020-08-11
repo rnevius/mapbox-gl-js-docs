@@ -5,6 +5,8 @@ description: A Mapbox style contains values of various types, most commonly as v
 contentType: specification
 order: 9
 layout: accordion
+products:
+- Mapbox Style Specification
 ---
 
 A Mapbox style contains values of various types, most commonly as values for the style properties of a layer.

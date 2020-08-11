@@ -8,6 +8,8 @@ contentType: example
 layout: example
 language:
 - JavaScript
+products:
+- Mapbox GL JS
 prependJs:
 - "import Example from '../../components/example';"
 - "import html from './style-ocean-depth-data.html';"

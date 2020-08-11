@@ -5,6 +5,8 @@ description: A style's glyphs property provides a URL template for loading signe
 contentType: specification
 order: 6
 layout: accordion
+products:
+- Mapbox Style Specification
 prependJs:
     - "import ref from '@mapbox/mapbox-gl-style-spec/reference/latest';"
 ---

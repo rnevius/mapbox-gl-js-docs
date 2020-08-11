@@ -5,6 +5,8 @@ description: Root level properties of a Mapbox style specify the map's layers, t
 contentType: specification
 order: 2
 layout: accordion
+products:
+- Mapbox Style Specification
 prependJs:
     - "import Items from '../../components/style-spec/items';"
     - "import ref from '@mapbox/mapbox-gl-style-spec/reference/latest';"

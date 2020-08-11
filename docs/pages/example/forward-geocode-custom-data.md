@@ -12,6 +12,9 @@ contentType: example
 layout: example
 language:
 - JavaScript
+products:
+- Mapbox GL JS
+- Geocoding API
 prependJs:
 - "import Example from '../../components/example';"
 - "import html from './forward-geocode-custom-data.html';"
