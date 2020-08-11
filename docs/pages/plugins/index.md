@@ -10,7 +10,6 @@ sidebarTheme: bg-gray-faint # add sidebar color
 sidebar: sectioned # use the SectionedNavigation sidebar (we supplement the data in batfish.config.json)
 includeFilterBar: true
 hideSubItems: false # show all sidebar sub items
-sidebarTitle: Plugins # add "Plugin" title to sidebar
 hideFeedback: true # hide feedback from page
 products:
 - Mapbox GL JS
