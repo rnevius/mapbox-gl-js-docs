@@ -9,4 +9,6 @@ language:
 hideSubItems: false # show all sub items in sidebar
 hideCardLanguage: true # hides the language from card (repetitive)
 hideCardDescription: true # hides the card description
+products:
+- Mapbox GL JS
 ---
