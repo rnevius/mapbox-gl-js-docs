@@ -3254,6 +3254,14 @@
   resolved "https://registry.yarnpkg.com/@mapbox/eslint-config-mapbox/-/eslint-config-mapbox-3.0.0.tgz#a54e07eef2e1adf871c9a387d9f4077323e424cb"
   integrity sha512-p+5JOZupUmnrAE33g1o/hXprvFkxo2TP9ZoQdjJ0AA4sJJhLL8lMR+acC9EQkO+sBNYIZmOVxj9M9NBDFyRjaA==
 
+"@mapbox/eslint-plugin-frontmatter@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@mapbox/eslint-plugin-frontmatter/-/eslint-plugin-frontmatter-0.1.1.tgz#64c44f0de3ec5c5c34673faa55241dab71f2b7b1"
+  integrity sha512-OiyVkGsWiEZzokSTJagRs9zJWimehZviMPIq98XOEejdF1uaWn5hbms03bp4E3IP0fW7WjrY1ws/3zXv4nUbVw==
+  dependencies:
+    "@mapbox/remark-lint-mapbox" "^1.2.0-lint.0"
+    gray-matter "^4.0.2"
+
 "@mapbox/hast-util-table-cell-style@^0.1.2", "@mapbox/hast-util-table-cell-style@^0.1.3":
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/@mapbox/hast-util-table-cell-style/-/hast-util-table-cell-style-0.1.3.tgz#5b7166ae01297d72216932b245e4b2f0b642dca6"
@@ -3483,6 +3491,21 @@
   dependencies:
     "@mapbox/jsxtreme-markdown" "^1.0.0"
     check-links "^1.1.8"
+    js-yaml "^3.14.0"
+    unified-lint-rule "^1.0.6"
+    unist-util-generated "^1.1.5"
+    unist-util-visit "^2.0.3"
+    unist-util-visit-parents "^3.1.0"
+    valid-url "^1.0.9"
+
+"@mapbox/remark-lint-mapbox@^1.2.0-lint.0":
+  version "1.2.0-lint.0"
+  resolved "https://registry.yarnpkg.com/@mapbox/remark-lint-mapbox/-/remark-lint-mapbox-1.2.0-lint.0.tgz#afad9032c1c62fe889103174f4743fbc32e2db8e"
+  integrity sha512-3BIZsa13r9rOsTufgrX8VHUIiCzqy+Too/zW08tIDl9jK4AyGLj1oVv7bxdRhHWkjU7l0m+jrpwqOgkNXc0fSA==
+  dependencies:
+    "@mapbox/jsxtreme-markdown" "^1.0.0"
+    check-links "^1.1.8"
+    gray-matter "^4.0.2"
     js-yaml "^3.14.0"
     unified-lint-rule "^1.0.6"
     unist-util-generated "^1.1.5"
@@ -9327,7 +9350,7 @@ graceful-fs@^4.2.4:
   resolved "https://registry.yarnpkg.com/graceful-readlink/-/graceful-readlink-1.0.1.tgz#4cafad76bc62f02fa039b2f94e9a3dd3a391a725"
   integrity sha1-TK+tdrxi8C+gObL5Tpo906ORpyU=
 
-gray-matter@^4.0.1:
+gray-matter@^4.0.1, gray-matter@^4.0.2:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/gray-matter/-/gray-matter-4.0.2.tgz#9aa379e3acaf421193fce7d2a28cebd4518ac454"
   integrity sha512-7hB/+LxrOjq/dd8APlK0r24uL/67w7SkYnfwhNFwg/VDIGWGmduTDYf3WNstLW2fbbmRwrDGCVSJ2isuf2+4Hw==

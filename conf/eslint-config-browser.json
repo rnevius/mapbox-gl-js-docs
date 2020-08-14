@@ -1,5 +1,5 @@
 {
-  "extends": ["./eslint-config-base.json", "@mapbox/eslint-config-docs"],
+  "extends": ["./eslint-config-base.json", "@mapbox/eslint-config-docs", "plugin:@mapbox/frontmatter/recommended"],
   "rules": {
     "es/no-for-of-loops": "off",
     "react/no-danger": "off"

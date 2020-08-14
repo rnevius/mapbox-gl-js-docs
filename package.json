@@ -23,6 +23,7 @@
     "@mapbox/dr-ui": "^0.29.1",
     "@mapbox/eslint-config-docs": "^0.6.0",
     "@mapbox/eslint-config-mapbox": "^3.0.0",
+    "@mapbox/eslint-plugin-frontmatter": "^0.1.1",
     "@mapbox/mapbox-gl-style-spec": "^13.15.0",
     "@mapbox/mapbox-gl-supported": "^1.4.0",
     "@mapbox/mbx-assembly": "^0.29.0",
