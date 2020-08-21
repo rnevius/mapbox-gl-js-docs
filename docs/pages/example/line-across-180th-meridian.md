@@ -5,6 +5,7 @@ topics:
   - Sources
   - Layers
 contentType: example
+layout: example
 language:
 - JavaScript
 products:
