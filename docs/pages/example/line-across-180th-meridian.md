@@ -1,9 +1,9 @@
 ---
 title: Display line that crosses 180th meridian
 description: Shows how to draw a line across the 180th meridian using a [GeoJSON source](/mapbox-gl-js/style-spec/sources/#geojson).
-tags:
-  - sources
-  - layers
+topics:
+  - Sources
+  - Layers
 contentType: example
 language:
 - JavaScript
