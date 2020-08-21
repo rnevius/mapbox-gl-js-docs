@@ -21,6 +21,7 @@ import ApiSidebar from './api/sidebar.js';
 import StyleSpecSidebar from './style-spec/sidebar.js';
 import AppropriateImage from './appropriate-image';
 import redirectApiRef from '../util/api-ref-redirect';
+import classnames from 'classnames';
 
 const redirectStyleSpec = require('../util/style-spec-redirect');
 
@@ -96,7 +97,11 @@ class PageShell extends React.Component {
                         // use custom sidebar for API and Style Spec since this data needs to be generated
                         customSidebar={this.renderCustomSideBar()}
                     >
+                    <div className={classnames('', {
+                      'style-spec-page': location.pathname.indexOf('/style-spec/') > -1
+                    })}>
                         {children}
+                        </div>
                     </PageLayout>
                 </AnalyticsShell>
             </ReactPageShell>

@@ -52,7 +52,7 @@ pre + .style-spec-property {
 
 /* remove border from style spec <Property/> h2 */
 #docs-content h2.no-h2-border,
-#docs-content .style-spec-page .prose .style-spec-property h2 {
+#docs-content .style-spec-page .style-spec-property h2 {
     border-top: 0 !important;
 }
 /* remove extra padding from style spec <Property/> h3 */
