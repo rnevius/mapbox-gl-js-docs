@@ -43,9 +43,6 @@ class PageShell extends React.Component {
             if (redirectApiRef(this.props.location))
                 window.location = redirectApiRef(this.props.location);
         }
-
-        // set mapbox metadata
-        window.mbxMetadata = mbxMeta[this.props.location.pathname] || {};
     }
     renderCustomSideBar = () => {
         const { location, frontMatter, headings } = this.props;
@@ -82,7 +79,7 @@ class PageShell extends React.Component {
                 meta={meta}
                 darkHeaderText={true}
             >
-                <AnalyticsShell location={location}>
+                <AnalyticsShell mbxMetadata={mbxMeta[this.props.location.pathname]} location={location}>
                     <PageLayout
                         location={location}
                         frontMatter={{
