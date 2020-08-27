@@ -2,7 +2,7 @@
 title: Display a map with a custom style
 description: Using a Mapbox-hosted custom [style](/help/glossary/style/).
 topics:
-  - styles
+  - Styles
 thumbnail: custom-style-id
 contentType: example
 layout: example

@@ -1,5 +1,3 @@
-// This file is ready-to-go with likely few (or no) required changes.
-// It's required to initialize the ReactPageShell and load the PageShell.
 import React from 'react';
 import PropTypes from 'prop-types';
 // docs-page-shell
@@ -13,9 +11,9 @@ import constants from '../constants';
 // batfish modules
 import { withLocation } from '@mapbox/batfish/modules/with-location';
 // dataSelectors
-import navigation from '@mapbox/batfish/data/navigation'; // eslint-disable-line
-import topics from '@mapbox/batfish/data/topics'; // eslint-disable-line
-import mbxMeta from '@mapbox/batfish/data/mbx-meta'; // eslint-disable-line
+import navigation from '@mapbox/batfish/data/navigation';
+import topics from '@mapbox/batfish/data/topics';
+import mbxMeta from '@mapbox/batfish/data/mbx-meta';
 
 import ApiSidebar from './api/sidebar.js';
 import StyleSpecSidebar from './style-spec/sidebar.js';
@@ -71,16 +69,22 @@ class PageShell extends React.Component {
     render() {
         const { location, children, frontMatter } = this.props;
         const meta = buildMeta(frontMatter, location.pathname, navigation);
-
+        const isStyleSpec = location.pathname.indexOf('/style-spec/') > -1;
+        const site = isStyleSpec
+            ? 'Style Specification' // set site name to Style spec
+            : constants.SITE;
         return (
             <ReactPageShell
-                site={constants.SITE}
+                site={site}
                 subsite={meta.subsite || undefined}
                 {...this.props}
                 meta={meta}
                 darkHeaderText={true}
             >
-                <AnalyticsShell mbxMetadata={mbxMeta[this.props.location.pathname]} location={location}>
+                <AnalyticsShell
+                    mbxMetadata={mbxMeta[this.props.location.pathname]}
+                    location={location}
+                >
                     <PageLayout
                         location={location}
                         frontMatter={{
@@ -90,17 +94,22 @@ class PageShell extends React.Component {
                                 includeFilterBar: true
                             })
                         }}
-                        constants={constants}
+                        constants={{
+                            ...constants,
+                            SITE: site // override site name
+                        }}
                         navigation={navigation}
                         topics={topics}
                         AppropriateImage={AppropriateImage}
                         // use custom sidebar for API and Style Spec since this data needs to be generated
                         customSidebar={this.renderCustomSideBar()}
                     >
-                    <div className={classnames('', {
-                      'style-spec-page': location.pathname.indexOf('/style-spec/') > -1
-                    })}>
-                        {children}
+                        <div
+                            className={classnames('', {
+                                'style-spec-page': isStyleSpec
+                            })}
+                        >
+                            {children}
                         </div>
                     </PageLayout>
                 </AnalyticsShell>

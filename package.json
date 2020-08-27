@@ -7,7 +7,7 @@
     "url": "git://github.com/mapbox/mapbox-gl-js-docs.git"
   },
   "engines": {
-    "node": ">=10"
+    "node": ">=12"
   },
   "devDependencies": {
     "@babel/core": "^7.11.4",
@@ -19,8 +19,8 @@
     "@mapbox/appropriate-images": "^4.0.0",
     "@mapbox/appropriate-images-react": "^1.0.0",
     "@mapbox/batfish": "1.9.8",
-    "@mapbox/copyeditor": "^0.7.0",
-    "@mapbox/dr-ui": "^1.0.0-layouts.23",
+    "@mapbox/copyeditor": "^0.10.0",
+    "@mapbox/dr-ui": "^1.0.1",
     "@mapbox/eslint-config-docs": "0.7.0",
     "@mapbox/eslint-config-mapbox": "^3.0.0",
     "@mapbox/mapbox-gl-style-spec": "^13.15.0",
@@ -28,10 +28,10 @@
     "@mapbox/mbx-assembly": "^0.29.0",
     "@mapbox/mr-ui": "^0.9.1",
     "@mapbox/prettier-config-docs": "^0.1.0",
-    "@mapbox/remark-config-docs": "^0.6.0",
+    "@mapbox/remark-config-docs": "^0.8.0",
     "@mapbox/remark-lint-link-text": "^0.5.0",
-    "@mapbox/remark-lint-mapbox": "^1.2.0-layouts.2",
-    "@sentry/browser": "5.21.1",
+    "@mapbox/remark-lint-mapbox": "^2.0.1",
+    "@sentry/browser": "5.21.4",
     "babel-eslint": "^10.1.0",
     "documentation": "~12.1.0",
     "downshift": "^5.4.2",
@@ -60,7 +60,7 @@
     "react-dom": "^16.13.1",
     "react-helmet": "^5.2.0",
     "remark": "^10.0.1",
-    "remark-cli": "^8.0.0",
+    "remark-cli": "^8.0.1",
     "remark-frontmatter": "^2.0.0",
     "remark-lint-heading-increment": "^2.0.1",
     "remark-react": "^5.0.1",
