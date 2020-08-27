@@ -1,6 +1,6 @@
 ---
 title: Add a WMS source
-description: Adding an external Web Map Service layer to the map.
+description: Add an external [Web Map Service layer](https://www.ogc.org/standards/wms) to the map.
 tags:
   - sources
 thumbnail: wms
