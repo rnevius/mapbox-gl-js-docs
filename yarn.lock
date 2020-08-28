@@ -2859,10 +2859,10 @@
     vfile-reporter "^5.1.2"
     vfile-sort "^2.2.1"
 
-"@mapbox/dr-ui@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@mapbox/dr-ui/-/dr-ui-1.0.1.tgz#494a5c26478a867e817fc1c7758e146c4038609c"
-  integrity sha512-+Ly3SDovRNBYbnagUbtY+E3OMs3z4crRI1+fO+rdW+mj5/8OyKDvp6M5BHCN/D+cHxJeFBcFkAWYKkbICpMFoQ==
+"@mapbox/dr-ui@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@mapbox/dr-ui/-/dr-ui-1.1.1.tgz#c7daa4fb540321102bc88de5668f51999d56b8c4"
+  integrity sha512-QgAuqyl/uYVzP2E8cauiN1RxhHVikxf4r/laIEBOD3/wdyVfSQNGRIncozYnh6N9VgSmIjdiU+5yZDq7wumMyA==
   dependencies:
     "@elastic/react-search-ui" "1.3.2"
     "@elastic/react-search-ui-views" "1.3.2"
